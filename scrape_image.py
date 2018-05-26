@@ -66,7 +66,8 @@ class RDWGSConverter:
 URL = 'https://geodata.nationaalgeoregister.nl/luchtfoto/rgb/wms?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&VERSION=1.3.0&LAYERS=2016_ortho25&WIDTH=256&HEIGHT=256&CRS=EPSG:3857&BBOX={bbox}'
 
 
-def scrape(x, y, object_id, folder='positives'):
+def scrape(coord, object_id, folder='positives'):
+    x, y = coord
     SIZE = 76
     conv = RDWGSConverter()
     wgs_x, wgs_y = conv.fromRdToWgs([x, y])
@@ -94,7 +95,7 @@ def fetch_negatives(min_coord, max_coord, n=2880):
     for i in tqdm.trange(n):
         x = random.uniform(min_x, max_x)
         y = random.uniform(min_y, max_y)
-        scrape(x, y, i, folder='negatives')
+        scrape((x, y), i, folder='negatives')
 
 
 def main():
