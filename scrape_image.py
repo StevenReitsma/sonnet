@@ -87,8 +87,10 @@ def fetch_positives():
         scrape(panel['geometry']['x'], panel['geometry']['y'], panel['attributes']['OBJECTID'])
 
 
-def fetch_negatives(min_x, min_y, max_x, max_y, n=2880):
+def fetch_negatives(min_coord, max_coord, n=2880):
     print('getting negatives')
+    min_x, min_y = min_coord
+    max_x, max_y = max_coord
     for i in tqdm.trange(n):
         x = random.uniform(min_x, max_x)
         y = random.uniform(min_y, max_y)
@@ -97,7 +99,7 @@ def fetch_negatives(min_x, min_y, max_x, max_y, n=2880):
 
 def main():
     # fetch_positives()
-    fetch_negatives(228100, 577600, 239200, 586500)
+    fetch_negatives((228100, 577600), (239200, 586500))
 
 
 if __name__ == '__main__':
