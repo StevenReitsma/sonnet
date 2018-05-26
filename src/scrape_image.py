@@ -4,6 +4,7 @@ import shutil
 import json
 import tqdm
 import random
+import numpy as np
 
 
 class RDWGSConverter:
@@ -63,18 +64,17 @@ class RDWGSConverter:
 
 # WIDTH=1425&HEIGHT=568
 # BBOX=732541.68115603,7023210.685730154,732967.1607078778,7023380.280386609
-URL = 'https://geodata.nationaalgeoregister.nl/luchtfoto/rgb/wms?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&VERSION=1.3.0&LAYERS=2016_ortho25&WIDTH=256&HEIGHT=256&CRS=EPSG:3857&BBOX={bbox}'
-
-
-def scrape(coord, object_id, folder='positives'):
-    x, y = coord
+URL = 'https://geodata.nationaalgeoregister.nl/luchtfoto/rgb/wms?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&VERSION=1.3.0&LAYERS={year}_ortho25&WIDTH=256&HEIGHT=256&CRS=EPSG:3857&BBOX={bbox}'
+def scrape(x, y, object_id, folder='positives', year=2017, is_rd=True):
     SIZE = 76
     conv = RDWGSConverter()
-    wgs_x, wgs_y = conv.fromRdToWgs([x, y])
+    if is_rd:
+        wgs_x, wgs_y = conv.fromRdToWgs([x, y])
+    else:
+        wgs_x, wgs_y = x, y
     epsg_coords = transform(Proj(init='epsg:4326'), Proj(init='epsg:3857'), wgs_y, wgs_x)
-    bbox = (
-        epsg_coords[0] - SIZE // 2, epsg_coords[1] - SIZE // 2, epsg_coords[0] + SIZE // 2, epsg_coords[1] + SIZE // 2)
-    response = requests.get(URL.format(bbox=','.join(list(map(str, bbox)))), stream=True)
+    bbox = (epsg_coords[0]-SIZE//2, epsg_coords[1]-SIZE//2, epsg_coords[0]+SIZE//2, epsg_coords[1]+SIZE//2)
+    response = requests.get(URL.format(year=year, bbox=','.join(list(map(str, bbox)))), stream=True)
     with open(f'{folder}/{object_id}.png', 'wb') as out_file:
         shutil.copyfileobj(response.raw, out_file)
 
@@ -90,17 +90,37 @@ def fetch_positives():
 
 def fetch_negatives(min_coord, max_coord, n=2880):
     print('getting negatives')
-    min_x, min_y = min_coord
-    max_x, max_y = max_coord
-    for i in tqdm.trange(n):
+    for i in tqdm.tqdm(range(10000, 10000+n)):
         x = random.uniform(min_x, max_x)
         y = random.uniform(min_y, max_y)
-        scrape((x, y), i, folder='negatives')
+        scrape(x, y, i, folder='satdata/train/negatives')
+
+
+def get_exhaustive_patches(min_x, min_y, max_x, max_y, stride=15):
+    i = 0
+    for x in tqdm.tqdm(np.arange(min_x, max_x, stride)):
+        for y in np.arange(min_y, max_y, stride):
+            scrape(x, y, i, 'test', year=2017)
+            i += 1
+
+
+def amsterdam_positives():
+    print('getting amsterdam positives')
+    with open('/home/joris/Downloads/ZONNEPANELEN2017.json') as f:
+        amsterdam_zp = json.load(f)['features']
+    
+    for panel in tqdm.tqdm(amsterdam_zp):
+        scrape(*reversed(panel['geometry']['coordinates']), 'ams'+str(panel['id']), year=2017, is_rd=False, folder='amsterdam_positives')
+
+
 
 
 def main():
     # fetch_positives()
-    fetch_negatives((228100, 577600), (239200, 586500))
+    # fetch_negatives(228100, 577600, 239200, 586500)
+    get_exhaustive_patches(230780, 581974, 231211, 582298)
+    # amsterdam_positives()
+    # fetch_negatives(118594, 484144, 123860, 487248, n=3_000)
 
 
 if __name__ == '__main__':
