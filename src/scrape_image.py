@@ -65,7 +65,10 @@ class RDWGSConverter:
 # WIDTH=1425&HEIGHT=568
 # BBOX=732541.68115603,7023210.685730154,732967.1607078778,7023380.280386609
 URL = 'https://geodata.nationaalgeoregister.nl/luchtfoto/rgb/wms?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&VERSION=1.3.0&LAYERS={year}_ortho25&WIDTH=256&HEIGHT=256&CRS=EPSG:3857&BBOX={bbox}'
-def scrape(x, y, object_id, folder='positives', year=2017, is_rd=True):
+def scrape(x, y, object_id, **kwargs):
+    folder = kwargs.pop('folder', 'positives')
+    year = kwargs.pop('year', 2017)
+    is_rd = kwargs.pop('is_rd', True)
     SIZE = 76
     conv = RDWGSConverter()
     if is_rd:
@@ -96,7 +99,8 @@ def fetch_negatives(min_coord, max_coord, n=2880):
         scrape(x, y, i, folder='satdata/train/negatives')
 
 
-def get_exhaustive_patches(min_x, min_y, max_x, max_y, stride=15):
+def get_exhaustive_patches(coords, stride=15):
+    min_x, min_y, max_x, max_y = coords
     i = 0
     for x in tqdm.tqdm(np.arange(min_x, max_x, stride)):
         for y in np.arange(min_y, max_y, stride):
@@ -118,7 +122,7 @@ def amsterdam_positives():
 def main():
     # fetch_positives()
     # fetch_negatives(228100, 577600, 239200, 586500)
-    get_exhaustive_patches(230780, 581974, 231211, 582298)
+    get_exhaustive_patches([230780, 581974, 231211, 582298])
     # amsterdam_positives()
     # fetch_negatives(118594, 484144, 123860, 487248, n=3_000)
 
