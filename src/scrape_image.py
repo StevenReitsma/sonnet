@@ -65,7 +65,8 @@ class RDWGSConverter:
 # WIDTH=1425&HEIGHT=568
 # BBOX=732541.68115603,7023210.685730154,732967.1607078778,7023380.280386609
 URL = 'https://geodata.nationaalgeoregister.nl/luchtfoto/rgb/wms?SERVICE=WMS&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&VERSION=1.3.0&LAYERS={year}_ortho25&WIDTH=256&HEIGHT=256&CRS=EPSG:3857&BBOX={bbox}'
-def scrape(x, y, object_id, **kwargs):
+def scrape(coords, object_id, **kwargs):
+    x, y = coords[0], coords[1]
     folder = kwargs.pop('folder', 'positives')
     year = kwargs.pop('year', 2017)
     is_rd = kwargs.pop('is_rd', True)
@@ -88,15 +89,16 @@ def fetch_positives():
         solar_panels = json.load(f)
 
     for panel in tqdm.tqdm(solar_panels):
-        scrape(panel['geometry']['x'], panel['geometry']['y'], panel['attributes']['OBJECTID'])
+        scrape((panel['geometry']['x'], panel['geometry']['y']), panel['attributes']['OBJECTID'])
 
 
-def fetch_negatives(min_coord, max_coord, n=2880):
+def fetch_negatives(min_coord, max_coord):
+    n = 2880
     print('getting negatives')
     for i in tqdm.tqdm(range(10000, 10000+n)):
         x = random.uniform(min_x, max_x)
         y = random.uniform(min_y, max_y)
-        scrape(x, y, i, folder='satdata/train/negatives')
+        scrape((x, y), i, folder='satdata/train/negatives')
 
 
 def get_exhaustive_patches(coords, stride=15):
@@ -104,7 +106,7 @@ def get_exhaustive_patches(coords, stride=15):
     i = 0
     for x in tqdm.tqdm(np.arange(min_x, max_x, stride)):
         for y in np.arange(min_y, max_y, stride):
-            scrape(x, y, i, 'test', year=2017)
+            scrape((x, y), i, 'test', year=2017)
             i += 1
 
 
@@ -114,7 +116,7 @@ def amsterdam_positives():
         amsterdam_zp = json.load(f)['features']
     
     for panel in tqdm.tqdm(amsterdam_zp):
-        scrape(*reversed(panel['geometry']['coordinates']), 'ams'+str(panel['id']), year=2017, is_rd=False, folder='amsterdam_positives')
+        scrape(reversed(panel['geometry']['coordinates']), 'ams'+str(panel['id']), year=2017, is_rd=False, folder='amsterdam_positives')
 
 
 
@@ -124,7 +126,7 @@ def main():
     # fetch_negatives(228100, 577600, 239200, 586500)
     get_exhaustive_patches([230780, 581974, 231211, 582298])
     # amsterdam_positives()
-    # fetch_negatives(118594, 484144, 123860, 487248, n=3_000)
+    # fetch_negatives(118594, 484144, 123860, 487248)
 
 
 if __name__ == '__main__':
