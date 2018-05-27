@@ -24,6 +24,7 @@ def add_capacity_info(result):
     result['PEAK_CONSUMPTION'] = peak_consumption
     result['PEAK_LOAD'] = result.PEAK_CONSUMPTION / result.VERMOGEN_NOMINAAL_CAPACITEIT
     result['YEAR'] = years
+    return result
 
 def result_to_csv(result):
     # Add bogus row with min/max value for proper scaling in arcgis
