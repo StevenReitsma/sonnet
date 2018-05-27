@@ -36,3 +36,7 @@ Steven Reitsma, data science consultant at Big Data Republic [![Foo](https://i.i
 Joris van Vugt, data science student at the Radboud University Nijmegen [![Foo](https://i.imgur.com/Dm73sxB.png)](https://www.linkedin.com/in/joris-van-vugt-506571109/)[![Foo](https://i.imgur.com/O2DATTM.png)](https://github.com/jvanvugt)<br>
 Tanja Crijns, data science student at the Radboud University Nijmegen [![Foo](https://i.imgur.com/Dm73sxB.png)](https://www.linkedin.com/in/tanjacrijns/)[![Foo](https://i.imgur.com/O2DATTM.png)](https://github.com/TanjaCrijns)<br>
 Chris Kamphuis, data science student at the Radboud University Nijmegen [![Foo](https://i.imgur.com/Dm73sxB.png)](https://www.linkedin.com/in/chris-kamphuis-985b3a52/)[![Foo](https://i.imgur.com/O2DATTM.png)](https://github.com/Chriskamphuis)<br>
+
+___
+
+![Alt Text](https://media.giphy.com/media/3HHDlFmKwwWK4rKDoI/giphy.gif)
