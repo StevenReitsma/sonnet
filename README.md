@@ -21,10 +21,12 @@ We have also created a database with prognostic demographic data based on existi
 
 *Solar panel forecast*<br>
 We combine the two databases to predict solar panel growth on a disctrict level.
+![Alt Text](https://media.giphy.com/media/g0vi8yyDDg7dsYvND8/giphy.gif)
 
 *Station capacity forecast*<br>
 Finally, we can combine all these effort into a product that can show you when a station is prone to failure by comparing the predicted net capacity used by solar panels in a certain district and the available capacity in the district stations.
 
+![Alt Text](https://media.giphy.com/media/x6MVDLaMTiBTXM5dmO/giphy.gif)
 
 
 ___
