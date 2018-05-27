@@ -31,8 +31,8 @@ ___
 
 #### Meet our team!
 
-Robbert van der Gugten, data science consultant at Big Data Republic [![Foo](https://i.imgur.com/Dm73sxB.png)](https://www.linkedin.com/in/robbert-van-der-gugten-80369270/)[![Foo](http://resizeimage.net/mypic/FfbGhtXZjeHnGELR/BLYhA/github-mark.png)](https://github.com/robbertvdg)<br>
-Steven Reitsma, data science consultant at Big Data Republic [![Foo](https://i.imgur.com/Dm73sxB.png)](https://www.linkedin.com/in/steven-reitsma-b5229471/)[![Foo](http://resizeimage.net/mypic/FfbGhtXZjeHnGELR/BLYhA/github-mark.png)](https://github.com/StevenReitsma)<br>
-Joris van Vugt, data science student at the Radboud University Nijmegen [![Foo](https://i.imgur.com/Dm73sxB.png)](https://www.linkedin.com/in/joris-van-vugt-506571109/)[![Foo](http://resizeimage.net/mypic/FfbGhtXZjeHnGELR/BLYhA/github-mark.png)](https://github.com/jvanvugt)<br>
-Tanja Crijns, data science student at the Radboud University Nijmegen [![Foo](https://i.imgur.com/Dm73sxB.png)](https://www.linkedin.com/in/tanjacrijns/)[![Foo](http://resizeimage.net/mypic/FfbGhtXZjeHnGELR/BLYhA/github-mark.png)](https://github.com/TanjaCrijns)<br>
-Chris Kamphuis, data science student at the Radboud University Nijmegen [![Foo](https://i.imgur.com/Dm73sxB.png)](https://www.linkedin.com/in/chris-kamphuis-985b3a52/)[![Foo](http://resizeimage.net/mypic/FfbGhtXZjeHnGELR/BLYhA/github-mark.png)](https://github.com/Chriskamphuis)<br>
+Robbert van der Gugten, data science consultant at Big Data Republic [![Foo](https://i.imgur.com/Dm73sxB.png)](https://www.linkedin.com/in/robbert-van-der-gugten-80369270/)[![Foo](https://i.imgur.com/O2DATTM.png)](https://github.com/robbertvdg)<br>
+Steven Reitsma, data science consultant at Big Data Republic [![Foo](https://i.imgur.com/Dm73sxB.png)](https://www.linkedin.com/in/steven-reitsma-b5229471/)[![Foo](https://i.imgur.com/O2DATTM.png)](https://github.com/StevenReitsma)<br>
+Joris van Vugt, data science student at the Radboud University Nijmegen [![Foo](https://i.imgur.com/Dm73sxB.png)](https://www.linkedin.com/in/joris-van-vugt-506571109/)[![Foo](https://i.imgur.com/O2DATTM.png)](https://github.com/jvanvugt)<br>
+Tanja Crijns, data science student at the Radboud University Nijmegen [![Foo](https://i.imgur.com/Dm73sxB.png)](https://www.linkedin.com/in/tanjacrijns/)[![Foo](https://i.imgur.com/O2DATTM.png)](https://github.com/TanjaCrijns)<br>
+Chris Kamphuis, data science student at the Radboud University Nijmegen [![Foo](https://i.imgur.com/Dm73sxB.png)](https://www.linkedin.com/in/chris-kamphuis-985b3a52/)[![Foo](https://i.imgur.com/O2DATTM.png)](https://github.com/Chriskamphuis)<br>
