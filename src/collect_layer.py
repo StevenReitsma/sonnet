@@ -1,3 +1,6 @@
+"""
+Scrape the paginated arcgis API to collect solar panel data of Groningen
+"""
 import json
 import requests
 
