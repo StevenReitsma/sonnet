@@ -14,7 +14,8 @@ ___
 We developed a product called Sonnet, which is a solar panel prediction system that can help prevent and reduce station failure. We have built the following features:
 
 *Solar panel database*<br>
-We have built a big database containing solar panel data. We have enriched an existing registration of solar panels by detecting non-registered solar panels in aerial photography (Open Data NL) with a deep neural network. 
+We have built a big database containing solar panel data. We have enriched an existing registration of solar panels by detecting non-registered solar panels in aerial photography (Open Data NL) with a deep neural network.
+![](https://i.imgur.com/Rkw49rD.png)
 
 *Demographic database*<br>
 We have also created a database with prognostic demographic data based on existing demographic data on a district level. We predicted the demographics per district for the upcoming 10 years. We also added the average roof quality per district by scraping the [ZonAtlas](http://www.zonatlas.nl/home/), which tells you whether your roof is suitable for solar panels.
