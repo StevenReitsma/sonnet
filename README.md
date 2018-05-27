@@ -43,3 +43,21 @@ Chris Kamphuis, data science student at the Radboud University Nijmegen [![](htt
 ___
 
 ![](https://media.giphy.com/media/3HHDlFmKwwWK4rKDoI/giphy.gif)
+
+___
+
+#### Extended version of our final presentation
+
+![](https://i.imgur.com/JPCEhrV.png)
+![](https://i.imgur.com/jJ5DwNR.png)
+![](https://i.imgur.com/9lojuoN.png)
+![](https://i.imgur.com/XNuT2SK.png)
+![](https://i.imgur.com/kS8fm2A.png)
+![](https://i.imgur.com/T8PW6xV.png)
+![](https://i.imgur.com/GDGZWle.png)
+![](https://i.imgur.com/NQ0iLVq.png)
+![](https://media.giphy.com/media/g0vi8yyDDg7dsYvND8/giphy.gif)
+![](https://i.imgur.com/v5qmYfT.png)
+![](https://media.giphy.com/media/x6MVDLaMTiBTXM5dmO/giphy.gif)
+![](https://i.imgur.com/GkygQd1.png)
+![](https://i.imgur.com/iQcHXqb.png)
