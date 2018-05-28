@@ -42,6 +42,17 @@ Chris Kamphuis, data science student at the Radboud University Nijmegen [![](htt
 
 ___
 
+#### Overview of data sets used
+- [Aerial imagery from Open Data NL](https://data.overheid.nl/data/dataset/luchtfoto-2016-25cm-rgb-open-data)
+- Groningen solar panel data (to train our solar panel detector)
+- [Amsterdam solar panel data](https://data.amsterdam.nl/#?dte=dcatd%2Fdatasets%2Fzonnepanelen&dtfs=T&mpb=topografie&mpz=11&mpv=52.3731081:4.8932945) (to train our solar panel detector)
+- [Demographics data from CBS (2011-2017)](https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/wijk-en-buurtstatistieken)
+- [ZonAtlas](http://www.zonatlas.nl/home/)
+- Maximum capacity of grid stations in Groningen (supplied by Enexis)
+- [Average load of grid stations in Groningen](https://www.enexis.nl/over-ons/documenten-en-publicaties/open-data) (Open data Enexis)
+
+___
+
 ![](https://media.giphy.com/media/3HHDlFmKwwWK4rKDoI/giphy.gif)
 
 ___
