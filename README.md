@@ -1,6 +1,6 @@
 ![](https://utrechtinc.nl/wp-content/uploads/2018/05/Header_NL.png)
 
-# Energy hack NL 2018 - Team Granny Heckle
+# Energy Hack NL 2018 - Team Granny Heckle
 ____
 
 [![BCH compliance](https://bettercodehub.com/edge/badge/energyhacknl2018/grannyheckle?branch=master&token=910d4dde78889fe8a37607f7495a62ee3b6ffc0e)](https://bettercodehub.com/)
@@ -21,7 +21,7 @@ We have built a big database containing solar panel data. We have enriched an ex
 We have also created a database with prognostic demographic data based on existing demographic data on a district level. We predicted the demographics per district for the upcoming 10 years. We also added the average roof quality per district by scraping the [ZonAtlas](http://www.zonatlas.nl/home/), which tells you whether your roof is suitable for solar panels.
 
 *Solar panel forecast*<br>
-We combine the two databases to predict solar panel growth on a disctrict level.
+We combine the two databases to predict solar panel growth on a district level.
 ![](https://media.giphy.com/media/g0vi8yyDDg7dsYvND8/giphy.gif)
 
 *Station capacity forecast*<br>
