@@ -5,10 +5,14 @@ ____
 
 [![BCH compliance](https://bettercodehub.com/edge/badge/energyhacknl2018/grannyheckle?branch=master&token=910d4dde78889fe8a37607f7495a62ee3b6ffc0e)](https://bettercodehub.com/)
 
+![](https://utrechtinc.nl/wp-content/uploads/2018/05/2018052133.jpg)
 
 #### About the hackathon
 How can we make sure that all of the energy that is used in the Netherlands is 100% sustainable?
 Custom solutions, data and technology can be a solution here. Enpuls and Enexis Netbeheer cooperate with TU Eindhoven, Microsoft, TNO, FAN, UtrechtInc, 80 hackers and innovators to come with innovative solutions to three challenges: *Flexible Energy*, *Durable Urban Development* and *Durable Mobility*.
+
+[More information on Energy Hack NL](https://utrechtinc.nl/sonnet-wint-energy-hack-nl-en-e4000/?lang=en)
+
 ___
 #### Our idea: Sonnet
 We developed a product called Sonnet, which is a solar panel prediction system that can help prevent and reduce station failure. We have built the following features:
